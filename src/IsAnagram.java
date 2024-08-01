@@ -20,6 +20,7 @@ public class IsAnagram {
     }
     public static void main(String[] args) {
         String a = "hello";
+        
         String b = "llohe";
         System.out.println(anaGram(a,b));
     }

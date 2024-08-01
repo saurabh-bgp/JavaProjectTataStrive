@@ -1,4 +1,4 @@
-class MultiPrivteValue {
+class Temp1{
     private String imgUrl;
     private String title;
     private String description;
@@ -31,18 +31,19 @@ class MultiPrivteValue {
     public String toString() {
         return "Image URL: " + this.imgUrl + "\nTitle: " + this.title + "\nDescription: " + this.description;
     }
-
+}
+class MultiPrivteValue {
     public static void main(String[] args) {
-        MultiPrivteValue[] obj = new MultiPrivteValue[2];
-        obj[0] = new MultiPrivteValue();
+       Temp1[] obj = new Temp1[2];
+        obj[0] = new Temp1();
         obj[0].setImgUrl("Saurabh");
         obj[0].setTitle("Name");
         obj[0].setDescription("This is name description");
-        obj[1] = new MultiPrivteValue();
-        obj[1].setImgUrl("Saurabh kumar");
+        obj[1] = new Temp1();
+        obj[1]. setImgUrl("Saurabh kumar");
         obj[1].setTitle("Name hai");
         obj[1].setDescription("This is name description apne bare me");
-        System.out.println(obj[0] + "\n" + obj[1]);
+        System.out.println(obj[0]+"\n"+obj[1]);
 
-    }
+}
 }
