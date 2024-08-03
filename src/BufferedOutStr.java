@@ -1,4 +1,5 @@
 import java.io.*;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class BufferedOutStr {
@@ -32,6 +33,7 @@ public class BufferedOutStr {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        
         System.out.println("Enter 1 to read a file and 2 to write to a file.");
         int inp = sc.nextInt();
         sc.nextLine();
