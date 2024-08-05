@@ -6,6 +6,14 @@ public class LinkedListExample {
             this.val = val;
         }
     }
+
+    static void travNode(Node a){
+        Node temp = a;
+        while (temp!=null){
+            System.out.println(temp.val);
+            temp=temp.node;
+        }
+    }
     public static void main(String[] args) {
         Node a = new Node(1);
         Node b = new Node(2);
@@ -28,11 +36,12 @@ public class LinkedListExample {
 //        System.out.println(c);
 //        System.out.println(a.node.node.val);
 //        System.out.println(d.node);
-        Node temp = a;
-       while (temp!=null){
-           System.out.println(temp.val);
-           temp=temp.node;
-       }
+//        Node temp = a;
+//       while (temp!=null){
+//           System.out.println(temp.val);
+//           temp=temp.node;
+//       }
 
+        travNode(a);
     }
 }
