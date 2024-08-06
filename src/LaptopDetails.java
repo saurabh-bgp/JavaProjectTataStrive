@@ -1,5 +1,30 @@
+import java.util.Comparator;
 import java.util.LinkedList;
 import java.util.Collections;
+
+class SearchByName implements Comparator<Laptop>{
+    @Override
+    public int compare(Laptop o1, Laptop o2) {
+        return o1.getName().compareTo(o2.getName());
+    }
+}
+class SearchByNameRev implements Comparator<Laptop>{
+    @Override
+    public int compare(Laptop o1, Laptop o2) {
+        return o2.getName().compareTo(o1.getName());
+    }
+}
+
+class SearchById implements Comparator<Laptop>{
+    public int compare(Laptop o1, Laptop o2){
+        return o1.getId()-o2.getId();
+    }
+}
+class SearchByIdRev implements Comparator<Laptop>{
+    public int compare(Laptop o1, Laptop o2){
+        return o2.getId()-o1.getId();
+    }
+}
 
 class Laptop implements Comparable<Laptop>{
     private String name;
@@ -97,6 +122,11 @@ public class LaptopDetails {
                 new Laptop("HP","corei7",2457554,8,8,"14inch")
                 );
 
+
+//        Collections.sort(laptopList,new SearchByName());
+        Collections.sort(laptopList,new SearchById());
+        Collections.sort(laptopList,new SearchByNameRev());
+        Collections.sort(laptopList, new SearchByIdRev());
         System.out.println(laptopList);
         Collections.sort(laptopList);
         System.out.println(laptopList);
