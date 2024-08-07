@@ -2,29 +2,29 @@ import java.util.Comparator;
 import java.util.LinkedList;
 import java.util.Collections;
 
-class SearchByName implements Comparator<Laptop>{
-    @Override
-    public int compare(Laptop o1, Laptop o2) {
-        return o1.getName().compareTo(o2.getName());
-    }
-}
-class SearchByNameRev implements Comparator<Laptop>{
-    @Override
-    public int compare(Laptop o1, Laptop o2) {
-        return o2.getName().compareTo(o1.getName());
-    }
-}
-
-class SearchById implements Comparator<Laptop>{
-    public int compare(Laptop o1, Laptop o2){
-        return o1.getId()-o2.getId();
-    }
-}
-class SearchByIdRev implements Comparator<Laptop>{
-    public int compare(Laptop o1, Laptop o2){
-        return o2.getId()-o1.getId();
-    }
-}
+//class SearchByName implements Comparator<Laptop>{
+//    @Override
+//    public int compare(Laptop o1, Laptop o2) {
+//        return o1.getName().compareTo(o2.getName());
+//    }
+//}
+//class SearchByNameRev implements Comparator<Laptop>{
+//    @Override
+//    public int compare(Laptop o1, Laptop o2) {
+//        return o2.getName().compareTo(o1.getName());
+//    }
+//}
+//
+//class SearchById implements Comparator<Laptop>{
+//    public int compare(Laptop o1, Laptop o2){
+//        return o1.getId()-o2.getId();
+//    }
+//}
+//class SearchByIdRev implements Comparator<Laptop>{
+//    public int compare(Laptop o1, Laptop o2){
+//        return o2.getId()-o1.getId();
+//    }
+//}
 
 class Laptop implements Comparable<Laptop>{
     private String name;
@@ -47,9 +47,9 @@ class Laptop implements Comparable<Laptop>{
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
+//    public void setName(String name) {
+//        this.name = name;
+//    }
 
     public String getProcessor() {
         return processor;
@@ -117,19 +117,22 @@ public class LaptopDetails {
     public static void main(String[] args) {
         LinkedList<Laptop> laptopList = new LinkedList<>();
         Collections.addAll(laptopList,
-                new Laptop("asus","intel",6454654,1000,4,"13inch"),
-                new Laptop("vivo","corei5",216461852,5,12,"14inch"),
-                new Laptop("HP","corei7",2457554,8,8,"14inch")
+                new Laptop("asus","intel",6,1000,4,"13inch"),
+                new Laptop("vivo","corei5",2,5,12,"14inch"),
+                new Laptop("HP","corei7",4,8,8,"14inch")
                 );
 
 
 //        Collections.sort(laptopList,new SearchByName());
-        Collections.sort(laptopList,new SearchById());
-        Collections.sort(laptopList,new SearchByNameRev());
-        Collections.sort(laptopList, new SearchByIdRev());
+//        Collections.sort(laptopList,new SearchById());
+//        Collections.sort(laptopList,new SearchByNameRev());
+//        Collections.sort(laptopList,((o1, o2) ->o2.getId()- o1.getId()));
+
         System.out.println(laptopList);
-        Collections.sort(laptopList);
+//        Collections.sort(laptopList);
+        Collections.sort(laptopList,((o1, o2) -> o2.getName().compareTo(o1.getName())));
         System.out.println(laptopList);
+
     }
 
 }
