@@ -2,9 +2,6 @@ import java.util.Scanner;
 class Seats {
     private int totalSeat;
 
-//    public int getTotalSeat() {
-//        return totalSeat;
-//    }
 
     public void setTotalSeat(int totalSeat) {
         this.totalSeat = totalSeat;

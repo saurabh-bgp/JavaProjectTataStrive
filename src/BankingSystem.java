@@ -63,7 +63,7 @@ public class BankingSystem extends Thread {
                     bs.start();
                 }
             }else {
-                System.out.println("Wrong input! try again with y.");
+                System.out.println("Wrong input! try again with y .");
             }
             System.out.println("Enter Y for more operations or any other key to exit.");
             ch = sc.next();

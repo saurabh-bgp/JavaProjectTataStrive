@@ -17,6 +17,11 @@ class Employee {
         this.age = age;
         this.jobRole = branch;
     }
+
+    public Employee() {
+
+    }
+
     public byte getEmpId() {
         return empId;
     }
